@@ -1,0 +1,138 @@
+.contacts {
+  color: var(--dark-text);
+}
+
+.header_contacts {
+  margin-left: 160px;
+  margin-bottom: 14px;
+}
+
+.contacts-wrap {
+  display: flex;
+}
+
+.contacts-wrap__left {
+  width: 35.5%;
+  padding: 124px 20px 124px 160px;
+  border: 1px solid #CACACA;
+}
+
+.contacts-wrap__right {
+  width: 64.5%;
+}
+
+.subtitel-contacts {
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.address {
+  margin-bottom: 29px;
+  line-height: 32px;
+}
+
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 38px;
+}
+
+.contacts-form__desqr {
+  margin-bottom: 14px;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.contacts-form__input {
+  width: 80%;
+  margin-bottom: 23px;
+  padding: 10px;
+  border: 1px solid #333333;
+  border-radius: 100px;
+}
+
+.contact-form__btn {
+  width: 157px;
+  height: 59px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+  color: #9D5CD0;
+  border: 2px solid #9D5CD0;
+  border-radius: 100px;
+  transition: color .3s ease-in-out, border .3s ease-in-out, background-color .3s ease-in-out;
+}
+
+.contact-form__btn:focus .contact-form__btn-text {
+  outline: 2px solid var(--active-purple-color);
+  outline-offset: 2px;
+}
+
+.contact-form__btn:hover .contact-form__btn-text {
+  color: var(--white-color);
+  outline: none;
+}
+
+.contact-form__btn:hover {
+  background-color: var(--purple-color);
+}
+
+.contact-form__btn:active {
+  border: 2px solid #D1A9F0;
+  background-color: var(--active-purple-color);
+}
+
+.messenger-desqr {
+  margin-bottom: 13px;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.messenger-list {
+  display: flex;
+}
+
+.messenger-list__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.messenger-list__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: filter .3s ease-in-out;
+}
+
+.messenger-list__link:hover {
+  filter: brightness(.8);
+}
+
+.messenger-list__link:focus {
+  filter: brightness(1.1);
+}
+
+.messenger-list__link:active{
+  filter: brightness(1.2);
+}
+
+.messenger-list__link_whats {
+  background-image: url(../../img/projects/Whatsapp-Icon.svg);
+}
+
+.messenger-list__link_teleg {
+  background-image: url(../../img/projects/Telegram_Logo.svg);
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}

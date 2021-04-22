@@ -1,0 +1,14 @@
+.about {
+  padding-top: 80px;
+  padding-bottom: 70px;
+  color: var(--dark-text);
+}
+
+.about__header {
+  margin-bottom: 16px;
+}
+
+.about__descr {
+  width: 68%;
+  line-height: 32px;
+}

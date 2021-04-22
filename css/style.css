@@ -1,0 +1,23 @@
+@import "_normolize.css";
+@import "_fonts.css";
+@import "_variables.css";
+@import "_global.css";
+@import "simplebar.css";
+@import "choices.min.css";
+@import "swiper-bundle.min.css";
+@import "justValidateTooltip.min.css";
+
+
+@import "./components/_header.css";
+@import "./components/_hero-section.css";
+@import "./components/_about.css";
+@import "./components/_gallery.css";
+@import "./components/_catalog.css";
+@import "./components/_events.css";
+@import "./components/_editions.css";
+@import "./components/_projects.css";
+@import "./components/_contacts.css";
+@import "./components/_footer.css";
+/*
+
+@import "./components/_media.css"; */

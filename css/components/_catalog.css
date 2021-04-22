@@ -1,0 +1,284 @@
+.catalog {
+  padding-top: 75px;
+  padding-bottom: 80px;
+  color: var(--dark-text);
+}
+
+.country-selection {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.country-selection__list {
+  display: flex;
+  margin-top: 8px;
+  align-items: center;
+}
+
+.country-selection__btn {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 46px 46px;
+  transition: filter .3s ease-in-out, border .3s ease-in-out;
+}
+
+.country-selection__btn_active::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 66px;
+  height: 66px;
+  border: 2px solid #9D5CD0;
+  z-index: 10;
+  border-radius: 50%;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+.country-selection__btn_out::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 66px;
+  height: 66px;
+  border: 2px solid #9D5CD0;
+  z-index: 10;
+  border-radius: 50%;
+  animation-duration: .7s;
+  animation-fill-mode: both;
+  animation-name: fadeOut;
+}
+
+.country-selection__btn:hover,
+.country-selection__btn:focus {
+  filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+}
+
+.country-selection__btn_active:hover {
+  filter: none;
+}
+
+.country-selection__btn:active {
+  filter: none;
+  border: 2px solid #9D5CD0;
+}
+
+.country-selection__btn_active:focus {
+  filter: none;
+}
+
+.country-selection__btn_active:focus::after {
+  filter: none;
+  border: 2px solid #C283F3;
+}
+
+.country-selection__btn_france {
+  background-image: url(../../img/catalog/France.png);
+}
+
+.country-selection__btn_german {
+  background-image: url(../../img/catalog/Germany.png);
+}
+
+.country-selection__btn_italy {
+  background-image: url(../../img/catalog/Italy.png);
+}
+
+.country-selection__btn_russia {
+  background-image: url(../../img/catalog/Russia.png);
+}
+
+.country-selection__btn_belgium {
+  background-image: url(../../img/catalog/Belgium.png);
+}
+
+.catalog__header {
+  margin-right: 39px;
+}
+
+.country-selection__item:not(:last-child) {
+  margin-right: 48px;
+}
+
+.catalog__desqr {
+  margin-bottom: 36px;
+  width: 68%;
+  line-height: 32px;
+}
+
+.catalog__content {
+  display: flex;
+}
+
+.art-wrap {
+  display: flex;
+  margin-bottom: 31px;
+}
+
+.artist__work {
+  margin: 0 auto;
+}
+
+.about__artist {
+  width: 46.87%;
+  margin-right: auto;
+}
+
+.artists {
+  width: 50%;
+}
+
+.artist__header {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.artist__date {
+  margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #999;
+}
+
+.artist__desqr {
+  line-height: 32px;
+}
+
+.years {
+  display: flex;
+  align-items: center;
+}
+
+.years__tick {
+  display: none;
+  /* width: 50px;
+  height: 50px;
+  border: 2px solid transparent;
+  border-radius: 50%; */
+}
+
+.years__tick_active {
+  display: block;
+}
+
+.years__header {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1;
+  margin-right: auto;
+}
+
+.artists__item {
+  line-height: 32px;
+  cursor: pointer;
+}
+
+.artists__list {
+  padding: 25px 30px 25px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 341px;
+}
+
+.ui-accordion-content-active {
+  border-top: 1px solid var(--purple-color);
+  border-bottom: 1px solid var(--purple-color);
+}
+
+.ui-accordion .ui-accordion-header {
+  padding: 31px 0 32px;
+  border: none;
+  border-bottom: 1px solid #CACACA;
+	background: #fff;
+	cursor: pointer;
+	outline: none;
+}
+
+.ui-accordion .ui-accordion-header:first-child {
+  border-top: 1px solid #CACACA;
+}
+
+.artist {
+  display: none;
+}
+
+.artist_active {
+  display: block;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+.country-choice {
+  display: none;
+}
+
+.country-choice_active {
+  display: block;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+.years__header {
+  transition: color .3s ease-in-out;
+}
+
+.years__tick_active path {
+  transition: fill .3s ease-in-out, stroke .3s ease-in-out;
+}
+
+.accordion-header:focus .years__header {
+  outline: 2px solid var(--active-purple-color);
+  outline-offset: 2px;
+}
+
+.accordion-header:focus .tick-btn__background {
+  stroke: var(--active-purple-color);
+}
+
+.accordion-header:hover .years__header {
+  color: var(--purple-color);
+  outline: none;
+}
+
+.accordion-header:hover .tick-btn__background {
+  fill: var(--purple-color);
+  stroke: var(--purple-color);
+}
+
+.accordion-header:hover .tick-btn__tick {
+  stroke: var(--white-color);
+}
+
+.accordion-header:active .tick-btn__background {
+  fill: var(--active-purple-color);
+  stroke: #D1A9F0;
+}
+
+.accordion-header:active .years__header {
+  color: var(--active-purple-color);
+  outline: none;
+}
+
+.years__tick_down,
+.years__tick_up {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}

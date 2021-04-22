@@ -1,0 +1,415 @@
+.header-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.container_header {
+  position: relative;
+  background-color: var(--black-color);
+  overflow: visible;
+}
+
+.logo {
+  display: block;
+  width: 173px;
+  height: 40px;
+}
+
+.logo path {
+  transition: fill .3s ease-in-out;
+}
+
+.logo:hover path {
+  fill: var(--light-purple-color);
+}
+
+.logo:focus path {
+  fill: var(--light-purple-color);
+}
+
+.logo:active path {
+  fill: var(--purple-color);
+}
+
+.navigation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navigation-list {
+  display: flex;
+}
+
+.navigation-list__item:not(:last-child) {
+  margin-right: 62px;
+}
+
+.navigation-list__link {
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color .3s ease-in-out;
+}
+
+.navigation-list__link:hover {
+  color: var(--light-purple-color);
+}
+
+.navigation-list__link:active {
+  color: var(--active-purple-color);
+}
+
+.navigation-list__link:focus {
+  outline: 2px solid var(--active-purple-color);
+  outline-offset: 2px;
+}
+
+.login__icon {
+  margin-right: 7px;
+}
+
+.login__icon path {
+  transition: fill .3s ease-in-out;
+}
+
+.login__button {
+  display: flex;
+  align-items: center;
+  width: 75px;
+  height: 19px;
+  font-size: 18px;
+  color: var(--white-color);
+  transition: color .3s ease-in-out;
+}
+
+.login__button:hover,
+.login__button:focus {
+  color: var(--light-purple-color);
+}
+
+.login__button:hover .login__icon path,
+.login__button:focus .login__icon path {
+  fill: var(--light-purple-color);
+}
+
+.login__button:active {
+  color: var(--active-purple-color);
+}
+
+.login__button:active .login__icon path {
+  fill: var(--active-purple-color);
+}
+
+/*  DOWN MENU */
+.down-menu {
+  position: absolute;
+  top: 100px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 -160px;
+  padding: 0 160px;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.menu {
+  display: flex;
+  margin-right: auto;
+}
+
+.menu__item {
+  position: relative;
+  padding: 25px 0;
+  cursor: pointer;
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 97px;
+}
+
+.menu__choice:focus {
+  outline: 2px solid var(--active-purple-color);
+  outline-offset: 2px;
+}
+
+.menu__item:hover .menu__name {
+  color: var(--purple-color);
+}
+
+.menu__item:hover .menu__choice{
+  outline: none;
+}
+
+.menu__item:hover .item-check path {
+  stroke: var(--purple-color);
+}
+
+.menu__item:active .menu__name {
+  color: var(--active-purple-color);
+}
+
+.menu__item:active .item-check path {
+  stroke: var(--active-purple-color);
+}
+
+/*Класс menu__item_nohover убирает эффект ховера с меню при нахождении курсора над выпадающим меню */
+
+.menu__item_nohover:hover .menu__name {
+  color: var(--white-color);
+}
+
+.menu__item_nohover:hover .item-check path {
+  stroke: var(--white-color);
+}
+
+.menu__item_nohover:active .menu__name {
+  color: var(--white-color);
+}
+
+.menu__item_nohover:active .item-check path {
+  stroke: var(--white-color);
+}
+
+.menu__item_nohover:hover .menu__choice{
+  outline: 2px solid var(--active-purple-color);
+  outline-offset: 2px;
+}
+
+.menu__choice {
+  display: flex;
+  align-items: center;
+}
+
+.item-check path {
+  transition: stroke .3s ease-in-out;
+}
+
+.menu__name {
+  margin-right: 4px;
+  transition: color .3s ease-in-out;
+}
+
+.item-check {
+  display: none;
+  width: 12px;
+  height: 11px;
+}
+
+.item-check_down {
+  display: block;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+.item-check_up {
+  display: block;
+  margin-top: 8px;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search:hover .search__input {
+  border-bottom: 1px solid var(--light-purple-color);
+}
+
+.search path {
+  transition: fill .3s ease-in-out;
+}
+
+.search rect {
+  transition: fill .3s ease-in-out;
+}
+
+.search:hover path {
+  fill: var(--light-purple-color) !important;
+}
+
+.search:hover rect {
+  fill: var(--light-purple-color) !important;
+}
+
+.search:focus {
+  outline: 2px solid var(--active-purple-color);
+  outline-offset: 4px;
+}
+
+.search__input:focus {
+  color: var(--light-purple-color);
+}
+
+
+.search__input {
+  width: 218px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.85);
+  transition: border-bottom .3s ease-in-out;
+}
+
+.search__input::placeholder {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.search__iqon {
+  margin-right: 11px;
+}
+
+.drop-down-menu {
+  position: absolute;
+  top: 100%;
+  display: none;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(0, 0, 0, .6);
+  z-index: 10;
+  cursor: auto;
+}
+
+.drop-down-menu_active {
+  display: block;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+.drop-down-list__item  {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 220px;
+  height: 40px;
+  padding-left: 14px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.drop-down-list__item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(157, 92, 208, 0);
+  transition: border .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+}
+
+.drop-down-list__item:hover::before,
+.drop-down-list__item:focus::before {
+  border: 2px solid rgba(157, 92, 208, 1);
+}
+
+.drop-down-list__item:active::before {
+  border: 2px solid rgba(209, 169, 240, 1);
+  background-color: rgba(194, 131, 243, .4);
+}
+
+.drop-down-list__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* REALISM */
+
+.drop-down-list__item_tinto {
+  background-image: url(../../img/header/Tintoretto.jpg);
+}
+
+.drop-down-list__item_frid {
+  background-image: url(../../img/header/Friedrich.jpg);
+}
+
+.drop-down-list__item_leonard {
+  background-image: url(../../img/header/Leonardo.jpg);
+}
+
+.drop-down-list__item_verrok {
+  background-image: url(../../img/header/Verrocchio.jpg);
+}
+
+/* IMPRESSIONISM */
+
+.drop-down-list__item_mone {
+  background-image: url(../../img/header/Monet.jpg);
+}
+
+.drop-down-list__item_sisl {
+  background-image: url(../../img/header/Sisley.jpg);
+}
+
+.drop-down-list__item_mane {
+  background-image: url(../../img/header/Manet.jpg);
+}
+
+.drop-down-list__item_renuar {
+  background-image: url(../../img/header/Renoir.jpg);
+}
+
+/* POSTIMPRESSIONISM */
+
+.drop-down-list__item_gog {
+  background-image: url(../../img/header/van_Gogh.jpg);
+}
+
+.drop-down-list__item_cezan {
+  background-image: url(../../img/header/Cezanne.jpg);
+}
+
+.drop-down-list__item_gogen {
+  background-image: url(../../img/header/Gauguin.jpg);
+}
+
+.drop-down-list__item_sera {
+  background-image: url(../../img/header/Seurat.jpg);
+}
+
+/* AVANTGARDE */
+
+.drop-down-list__item_kandin {
+  background-image: url(../../img/header/Kandinsky.jpg);
+}
+
+.drop-down-list__item_marin {
+  background-image: url(../../img/header/Marinetti.jpg);
+}
+
+.drop-down-list__item_malev {
+  background-image: url(../../img/header/Malevich.jpg);
+}
+
+.drop-down-list__item_picc {
+  background-image: url(../../img/header/Picasso.jpg);
+}
+
+/* FUTURISM */
+
+.drop-down-list__item_karra {
+  background-image: url(../../img/header/Carra.jpg);
+}
+
+.drop-down-list__item_pratel {
+  background-image: url(../../img/header/Pratella.jpg);
+}
+
+.drop-down-list__item_severin {
+  background-image: url(../../img/header/Severini.jpg);
+}
+
+.drop-down-list__item_balla {
+  background-image: url(../../img/header/Balla.jpg);
+}
